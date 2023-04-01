@@ -28,6 +28,8 @@ app.post('/webhooks/orders/create', async (req, res) => {
 });
 
 // Start the server
-app.listen(3000, () => {
-  console.log('Webhook endpoint listening on port 3000!');
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
 });
