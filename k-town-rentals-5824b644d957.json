@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "k-town-rentals",
+  "private_key_id": "5824b644d9577e41167075e4b9c109c6ac4a00f3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDNd7frSf43zllw\nz6+09vM/W3C7YGREkakxwmU5A5N0+27vF3OdSE2JnjOCbCk3KmFX9/kJVSoIBN0a\nNg8Hx3ZiP3k/KULzw84k59dQIzq6IvnGcDfLCzYBrFnq2aWnFW7vbtq5oQV70Ait\n/CgnFbB9CdbN6GxPuGFd7UBcJCKAv9no8nK/nD9V5OvvOcsvYAMtB4b5fafxPTOH\n3CzoG46Hdlk3rG9+rscHodaBgr+//3orM+uvp0qAWPu/fEl/30w/0R97r0iafsDI\nJZpdEomkT+UePLBQfJYJvY8vOQ9xuUAyxQkwt4+siQbQ5OhljkuuAxeZfTEFxo+Z\n9Bl761H9AgMBAAECggEAFeCDYrgUK1j7SPm0Ga6Zo8tWq3zN8EcaHsQ2BuYMk04a\nN7blhn+mUdrYXTCrCsamarlqeMXqncP2zs2muAtS3Y8ol8MK7+2PS3qsAEpf/GWw\n9qIILsRY0cDKKilWa/3qO/AvtcghT1eNNQk+NTsn+YhMqMvwjGRzaY7TZXwreE3E\nSeWPHV3aIrN7EUyEhC16fW91Ww826SF7E4cG0iypKv3LI37as6JJd0YSbuG4II01\n/OU1gXEgLc5Z2ljkL6xdFqs/7GvgvP0pjcLPY6bz/gc0F6HXwYRgnXqjfLz8872o\nTYY0RQtCy7UYYe5ZVPhEnST4h31xkh1FQg3bo9JPOQKBgQDqiPdSP3egr2Fr+/hj\nCuqwIPwlW8+DGi5EPaiFF1jHECfM4GpqbBMKuFpQja9TI/F7bSCS/45ZLfd7Ovtt\nZHzjXYh96Dhh0t9CvxqQzIAlbQIaKeiosg9qnSNyJ5aQOA69vg6GE1v1rsl7dvqs\nYjmu0II6ysNndN0W7K5I9hvfxwKBgQDgRbgGyTACyPCdWCjClh0tqps81jry3C4c\nYKZ44sGhGr9kThYin9DkGB6XdCaE9ar+l4K2b26oImAMDF0bex3Z11aydshgeXvi\n49RU+cbd1U5y4CclzIAFkZwPHJokzWr3cXdFlPlJdwneTIi/hfMwJbfUyvwT+6O3\nXNCAaR+IGwKBgEZinHaefXRHreEOWVi/6fa5r3I2v2wE62Wna2+ltgrnmkot/0G4\n9W3+LXyHSNqWqt3zvhbfgwTYerEM3m/R/HjvlQrUKjeRZVdOqtZRyRNyR3M6qIwY\nA/BnAEA+CT121VW0N/+cx7hPoD/hURFy2QTRpoOmXkYqGD/M//D9ixf5AoGAGcrK\n1DT1CYz0ZxQJc/9xkZvqSH/WvbFmuCrBWmuxmwaJdk6oqwi4LFM9yWs5NtdN+AOS\nq8p67mktpJUTbCKnlzL1rIaOmtG91qUe+TrUjRSH9hwjRGyVWI6bZP2EGLFrGNP6\nxIzScol3IBKrM2ODSUk9MAK8JMwu0tqgu/PbBXsCgYEAiafgTMclUCiWfYkAHDZ/\nkwPdmzwvxCr32P8CNPb0YU12YcSDoXg8aJ2PFUeukNfitIRzFtrtPOP8UtpJhyXm\noyqrq9If6dBmqDCsCbL537Kjq3fkKnVF0QTuwHt7GcfmGKRSFLdtQxKmAAx4fU6p\nP2ERfRHT0JMkw6DwGEWd15c=\n-----END PRIVATE KEY-----\n",
+  "client_email": "k-town-renta-service-account@k-town-rentals.iam.gserviceaccount.com",
+  "client_id": "110101157260170128334",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/k-town-renta-service-account%40k-town-rentals.iam.gserviceaccount.com"
+}
