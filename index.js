@@ -1,35 +1,19 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const Shopify = require('shopify-api-node');
 
-// Set up Shopify API credentials
-const shopify = new Shopify({
-  shopName: 'k-town-rentals.myshopify.com',
-  apiKey: '319cc2f4fb20d2301c40880cf60132ed',
-  password: '3d2d61203a79e8a427bc2611b1c4944e'
-});
-
-// Create Express app and configure middleware
 const app = express();
+const port = process.env.PORT || 3000;
+
+// Use body-parser middleware to parse incoming webhook data
 app.use(bodyParser.json());
 
-// Set up webhook endpoint for order creation events
-app.post('/webhooks/orders/create', async (req, res) => {
-  const order = req.body;
-  console.log('Received order creation webhook:', order);
-
-  // Retrieve order details from Shopify API
-  const orderDetails = await shopify.order.get(order.id);
-
-  // Perform additional actions with order details here
-  // such as adding the order to Google Cloud Calendar
-
-  res.sendStatus(200);
+// Handle incoming webhook requests
+app.post('/webhooks/orders/create', (req, res) => {
+  console.log('Received webhook:', req.body);
+  res.status(200).send('Webhook received successfully');
 });
 
 // Start the server
-
-const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+  console.log(`App listening at http://localhost:${port}`);
 });
