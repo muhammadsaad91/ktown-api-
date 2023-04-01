@@ -4,7 +4,7 @@ const Shopify = require('shopify-api-node');
 
 // Set up Shopify API credentials
 const shopify = new Shopify({
-  shopName: 'https://k-town-rentals.myshopify.com',
+  shopName: 'k-town-rentals.myshopify.com',
   apiKey: '319cc2f4fb20d2301c40880cf60132ed',
   password: '3d2d61203a79e8a427bc2611b1c4944e'
 });
