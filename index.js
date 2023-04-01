@@ -340,27 +340,51 @@ const deleteEvent = async (eventId) => {
                     line_item_date_time = line_item_date_time.replace(' AM', ':00');
     
                     //  if find Pm so 01 to 07 add 12 to it and than add 12 to it
-                    if (line_item_date_time.includes(' PM')) {
-                        line_item_date_time = line_item_date_time.replace(' PM', ':00');
-                        if (line_item_date_time.includes('01:00')) {
-                            line_item_date_time = line_item_date_time.replace('01:00', '13:00');
-                        } else if (line_item_date_time.includes('02:00')) {
-                            line_item_date_time = line_item_date_time.replace('02:00', '14:00');
-                        } else if (line_item_date_time.includes('03:00')) {
-                            line_item_date_time = line_item_date_time.replace('03:00', '15:00');
-                        } else if (line_item_date_time.includes('04:00')) {
-                            line_item_date_time = line_item_date_time.replace('04:00', '16:00');
-                        } else if (line_item_date_time.includes('05:00')) {
-                            line_item_date_time = line_item_date_time.replace('05:00', '17:00');
-                        } else if (line_item_date_time.includes('06:00')) {
-                            line_item_date_time = line_item_date_time.replace('06:00', '18:00');
-                        } else if (line_item_date_time.includes('07:00')) {
-                            line_item_date_time = line_item_date_time.replace('07:00', '19:00');
-                        } 
+                    // switch statement 
+                    // 01 = 13 so on 
+                    // 08 = 20 so on
+
+                    line_item_date_time = line_item_date_time.replace(' PM', ':00');
+                    switch (line_item_date_time.slice(11, 13)) {
+                        case '01':
+                            line_item_date_time = line_item_date_time.slice(0, 11) + '13' + line_item_date_time.slice(13, 19);
+                            break;
+                        case '02':
+                            line_item_date_time = line_item_date_time.slice(0, 11) + '14' + line_item_date_time.slice(13, 19);
+                            break;
+                        case '03':
+                            line_item_date_time = line_item_date_time.slice(0, 11) + '15' + line_item_date_time.slice(13, 19);
+                            break;
+                        case '04':
+                            line_item_date_time = line_item_date_time.slice(0, 11) + '16' + line_item_date_time.slice(13, 19);
+                            break;
+                        case '05':
+                            line_item_date_time = line_item_date_time.slice(0, 11) + '17' + line_item_date_time.slice(13, 19);
+                            break;
+                        case '06':
+                            line_item_date_time = line_item_date_time.slice(0, 11) + '18' + line_item_date_time.slice(13, 19);
+                            break;
+                        case '07':
+                            line_item_date_time = line_item_date_time.slice(0, 11) + '19' + line_item_date_time.slice(13, 19);
+                            default:
+                                break;
+                    }
+                    //
+
+    // if include T18 or T19 than this not run otherwise run this
+                      
+                    if (line_item_date_time.includes('18:00') || line_item_date_time.includes('19:00')) {
+                        
+                        
+                        line_item_date_time = line_item_date_time.replace(':00', ':00');
+                        
+                        
+                    }
+                    else {
+                        line_item_date_time = line_item_date_time.replace(':00', '');
                     }
            
-                    line_item_date_time = line_item_date_time.replace(':00', '');
-                  console.log(line_item_date_time);
+                //   console.log(line_item_date_time);
                   let end  = ''   ;
                   if (variant == '1')  {
                    //  line_item_date_time 11 12 index only increase by 1  this is double digit number so 09 becomes 10 11 becomes 12 if 02 becomes 03 must include 0 with single digit number if value become 01 to 07 to change it to 13 to 19 and than add according to situation to it
@@ -441,6 +465,7 @@ const deleteEvent = async (eventId) => {
             const variant = getlastorder.variant;
             const line_item_date_time = getlastorder.line_item_date_time;
             const end = getlastorder.end;
+
             
              
 
