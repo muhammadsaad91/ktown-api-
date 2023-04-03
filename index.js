@@ -2,33 +2,69 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
-// Use body-parser middleware to parse incoming webhook data
 app.use(bodyParser.json());
 
-// Handle incoming webhook requests
 app.post('/webhooks/orders/create', (req, res) => {
-  const order = req.body;
-  console.log('Received webhook for order:', order);
-  
-  // Extract the relevant information from the order object
-  const orderId = order.id;
-  const customerEmail = order.email;
-  const lineItems = order.line_items;
-  const totalPrice = order.total_price;
+  console.log('Received webhook:', req.body);
 
-  // Do something with the extracted information, such as adding it to a database or sending a notification
-  // ...
+  // i want this to added in variable variant title created_at name email 
+   
+  const { id, email, line_items, customer } = req.body;
+  const { name, created_at } = customer;
+  const { title, variant_title } = line_items[0];
+  
+  // add this in a json type variable 
+  const data = {
+    id,
+    email,
+    title,
+    variant_title,
+    name,
+    created_at
+  };
+
+  console.log(data);
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   res.status(200).send('Webhook received successfully');
 });
-
-
-
-
-
-
 
 // Start the server
 app.listen(port, () => {
