@@ -1,19 +1,27 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const app = express();
+
+
+const {google} = require('googleapis');
+const { beyondcorp } = require('googleapis/build/src/apis/beyondcorp');
+require('dotenv').config();
+const app = require('express')();
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const { response } = require('express');
+const { json } = require('body-parser');
+
 const port = process.env.PORT || 3000;
 
-// Use body-parser middleware to parse incoming webhook data
 app.use(bodyParser.json());
 
-// Handle incoming webhook requests
 app.post('/webhooks/orders/create', (req, res) => {
   console.log('Received webhook:', req.body);
- 
-  
-  const orders = [req.body];
-  console.log(orders);
+
+  // add this in Array
+  const order = [req.body];
+  console.log(order);
 
   let orderData = [];
 
@@ -256,7 +264,54 @@ insertEvent(event)
         console.log(err);
     });
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   res.status(200).send('Webhook received successfully');
 });
 
