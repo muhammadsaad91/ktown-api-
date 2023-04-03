@@ -11,23 +11,8 @@ app.use(bodyParser.json());
 app.post('/webhooks/orders/create', (req, res) => {
   console.log('Received webhook:', req.body);
   
-  
-  const { id, email, line_items, customer } = req.body;
-  const { name, created_at } = customer;
-  const { title, variant_title } = line_items[0];
-  
-  // add this in a json type variable 
-  const data = {
-    id,
-    email,
-    title,
-    variant_title,
-    name,
-    created_at
-  };
-
-  const array = [data]
-  console.log(array);
+ const orders = [req.body]
+ console.log(orders)
   
   
   res.status(200).send('Webhook received successfully');
