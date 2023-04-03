@@ -10,23 +10,8 @@ app.post('/webhooks/orders/create', (req, res) => {
   console.log('Received webhook:', req.body);
 
   // i want this to added in variable variant title created_at name email 
-   
-  const { id, email, line_items, customer } = req.body;
-  const { name, created_at } = customer;
-  const { title, variant_title } = line_items[0];
-  
-  // add this in a json type variable 
-  const data = {
-    id,
-    email,
-    title,
-    variant_title,
-    name,
-    created_at
-  };
-
+  const data=[req.body];
   console.log(data);
-
 
 
  
