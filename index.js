@@ -26,7 +26,8 @@ app.post('/webhooks/orders/create', (req, res) => {
     created_at
   };
 
-  console.log(data);
+  const array = [data]
+  console.log(array);
   
   
   res.status(200).send('Webhook received successfully');
