@@ -20,8 +20,8 @@ app.post('/webhooks/orders/create', (req, res) => {
   console.log('Received webhook:', req.body);
 
   // add this in Array
-  const order = [req.body];
-  console.log(order);
+  const orders = [req.body];
+  console.log(orders);
 
   let orderData = [];
 
