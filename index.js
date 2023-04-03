@@ -9,12 +9,6 @@ app.use(bodyParser.json());
 app.post('/webhooks/orders/create', (req, res) => {
   console.log('Received webhook:', req.body);
 
-  // i want this to added in variable variant title created_at name email 
-  const data=[req.body];
-  console.log(data);
-
-
- 
 
 
 
